@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PlantsiveAggresive</string>
+    <string name="humidity">Humidity</string>
+    <string name="temperature">temperature</string>
+    <string name="display_number">0</string>
+    <string name="save">Save</string>
+</resources>
