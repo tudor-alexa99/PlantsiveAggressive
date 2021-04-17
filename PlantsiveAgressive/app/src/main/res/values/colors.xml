@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="ok_green"> #8dc3a7</color>
+    <color name="ok_green_dark"> #4e9c81</color>
+
+    <color name="high_red">#ec9488</color>
+    <color name="high_red_dark">#793f4e</color>
+
+    <color name="low_blue">#76d5fc</color>
+    <color name="low_blue_dark">#1E88E5</color>
+
 </resources>

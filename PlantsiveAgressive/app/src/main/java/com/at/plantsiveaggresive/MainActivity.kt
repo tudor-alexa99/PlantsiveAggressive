@@ -19,7 +19,7 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var database: DatabaseReference
-    private lateinit var messages: kotlin.Array<String>
+    private lateinit var titles: kotlin.Array<String>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-//        Get the messages from the list
-        messages = resources.getStringArray(R.array.tempe_high)
-        val index = Random.nextInt(0, messages.size)
+//        Set the title
+        titles = resources.getStringArray(R.array.general_bad)
+        val index = Random.nextInt(0, titles.size)
+        binding.tvTitle.text = titles[index]
 
-        binding.tvTitle.text = messages[index]
 
         FirebaseApp.initializeApp(this)
         database = Firebase.database.reference
@@ -45,7 +45,11 @@ class MainActivity : AppCompatActivity() {
                     binding.tvDisplayTemp.text = liveData.currentTemp.toString() + " ℃"
                     binding.tvDisplayHumid.text = liveData.currentHumid.toString() + " %"
 
-                    setPassiveAggressiveMessage()
+                    setPassiveAggressiveMessage(
+                        liveData.flag,
+                        liveData.currentHumid,
+                        liveData.thresholdHumid
+                    )
                 }
             }
 
@@ -114,7 +118,26 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setPassiveAggressiveMessage() {
+    private fun setPassiveAggressiveMessage(flag: String, currentHumid: Int, thresholdHumid: Int) {
+        if (flag == "OK" && currentHumid >= thresholdHumid) {
+            binding.tvMessage.text = resources.getString(R.string.status_ok)
+            binding.tvMessage.setBackgroundResource(R.drawable.tv_background_green)
+        } else if (flag == "HIGH") {
+            val messages = resources.getStringArray(R.array.tempe_high)
+            val index = Random.nextInt(0, messages.size)
+            binding.tvMessage.text = messages[index]
+            binding.tvMessage.setBackgroundResource(R.drawable.tv_background_red)
+        } else {
+            val messages = resources.getStringArray(R.array.temp_low)
+            val index = Random.nextInt(0, messages.size)
+            binding.tvMessage.text = messages[index]
+            binding.tvMessage.setBackgroundResource(R.drawable.tv_background_blue)
+        }
+
+        if (currentHumid < thresholdHumid) {
+            binding.tvMessage.text =
+                binding.tvMessage.text.toString() + " \n" + resources.getString(R.string.humid_low)
+        }
     }
 
 

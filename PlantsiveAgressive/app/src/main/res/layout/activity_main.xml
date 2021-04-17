@@ -24,7 +24,13 @@
         android:id="@+id/tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/tv_display_temp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,10 +77,10 @@
         android:min="0"
         app:layout_constraintBottom_toTopOf="@+id/btn_save_threshold"
         app:layout_constraintEnd_toEndOf="@+id/sb_insert_humid"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/sb_insert_humid"
         app:layout_constraintTop_toBottomOf="@+id/tv_display_temp"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <TextView
         android:id="@+id/tv_seekbar_temp"
@@ -91,7 +97,7 @@
         android:layout_width="234dp"
         android:layout_height="46dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="20dp"
         android:max="100"
         android:min="0"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,14 +111,16 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/sb_insert_humid"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toEndOf="@+id/sb_insert_humid"
-        app:layout_constraintTop_toTopOf="@+id/sb_insert_humid" />
+        app:layout_constraintTop_toTopOf="@+id/sb_insert_humid"
+        app:layout_constraintVertical_bias="0.518" />
 
     <Button
         android:id="@+id/btn_save_threshold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
