@@ -6,13 +6,23 @@
     <string name="save">Save</string>
 
 
+    <string-array name="tempe_high">
+        <item>Do I look like a cactus to you? Turn on the damn AC!"</item>
+        <item name="temp_high_2">"May both sides of your pillow be as hot as I am"</item>
+    </string-array>
 
-    <string name="temp_low">"I'm freezing in here. Stop being poor and pay for the heating!"</string>
-    <string name="temp_high_1">"Do I look like a cactus to you? Turn on the damn AC!"</string>
-    <string name="temp_high_2">"May both sides of your pillow be as hot as I am"</string>
+    <string-array name="temp_low">
+        <item>"I'm freezing in here. Stop being poor and pay for the heating!"</item>
+        <item>"If only you were as cool as I am.."</item>
+    </string-array>
 
     <string name="humid_low">"Feed me human!"</string>
 
-    <string name="disgrace">"You are a disgrace!"</string>
+    <string-array name="general_bad">
+        <item>"You are a disgrace!"</item>
+        <item>"Go make some Oale and leave plants and potting for others"</item>
+        <item>"Go kill yourself before you kill me"</item>
+    </string-array>
+
     <string name="status_ok">"I will spare you today, my slave"</string>
 </resources>

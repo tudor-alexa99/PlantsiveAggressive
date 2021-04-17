@@ -1,20 +1,25 @@
 package com.at.plantsiveaggresive
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SeekBar
 import com.at.plantsiveaggresive.databinding.ActivityMainBinding
+import com.google.android.gms.common.internal.StringResourceValueReader
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.ktx.initialize
+import java.lang.reflect.Array
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var database: DatabaseReference
+    private lateinit var messages: kotlin.Array<String>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+//        Get the messages from the list
+        messages = resources.getStringArray(R.array.tempe_high)
+        val index = Random.nextInt(0, messages.size)
+
+        binding.tvTitle.text = messages[index]
 
         FirebaseApp.initializeApp(this)
         database = Firebase.database.reference
