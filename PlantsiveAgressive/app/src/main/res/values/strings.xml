@@ -4,4 +4,15 @@
     <string name="temperature">temperature</string>
     <string name="display_number">0</string>
     <string name="save">Save</string>
+
+
+
+    <string name="temp_low">"I'm freezing in here. Stop being poor and pay for the heating!"</string>
+    <string name="temp_high_1">"Do I look like a cactus to you? Turn on the damn AC!"</string>
+    <string name="temp_high_2">"May both sides of your pillow be as hot as I am"</string>
+
+    <string name="humid_low">"Feed me human!"</string>
+
+    <string name="disgrace">"You are a disgrace!"</string>
+    <string name="status_ok">"I will spare you today, my slave"</string>
 </resources>

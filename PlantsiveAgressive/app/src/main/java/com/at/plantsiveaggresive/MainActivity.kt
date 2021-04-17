@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 if (liveData != null) {
                     binding.tvDisplayTemp.text = liveData.currentTemp.toString() + " ℃"
                     binding.tvDisplayHumid.text = liveData.currentHumid.toString() + " %"
+
+                    setPassiveAggressiveMessage()
                 }
             }
 
@@ -80,7 +82,7 @@ class MainActivity : AppCompatActivity() {
                 seek: SeekBar,
                 progress: Int, fromUser: Boolean
             ) {
-                binding.tvSeekbarTemp.text = progress.toString() + " %"
+                binding.tvSeekbarHumid.text = progress.toString() + " %"
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -99,6 +101,9 @@ class MainActivity : AppCompatActivity() {
             Log.d("Threshold Temperature", thresholdTemp.toString())
             database.child("liveData").child("thresholdTemp").setValue(thresholdTemp)
         }
+    }
+
+    private fun setPassiveAggressiveMessage() {
     }
 
 
