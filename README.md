@@ -38,9 +38,21 @@ sudo python setup.py install
 - Create firebase project
 - Set up Realtime Database
 
+```
+{
+  "rules": {
+    ".read": "true",  // 2021-5-17
+    ".write": "true",  // 2021-5-17
+  }
+}
+```
+
 3. Mobile app
 - Create a new project and add it to the firebase console
 - Add the generated json file to the android project
+- Create a new (LiveData) entity in the firebase
+![image](https://user-images.githubusercontent.com/47315066/115563175-edfa7700-a2bf-11eb-8652-808a1f2648b7.png)
+
 
 ### Build and run 
 1. Run the script 
@@ -49,3 +61,4 @@ python3 script.py
 ````
 
 2. Deploy the Mobile application 
+Build and run, either on a phisycal device or an emulator
