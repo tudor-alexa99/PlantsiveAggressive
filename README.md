@@ -26,6 +26,12 @@ Data will be stored in a cloud server and displayed through an application.
 - Install dependencies 
 ```
 sudo pip3 install requests python-firebase pigpio
+
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
+cd Adafruit_Python_DHT
+
+sudo python setup.py install
 ```
 
 2. Firebase
