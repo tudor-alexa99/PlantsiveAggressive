@@ -62,3 +62,7 @@ python3 script.py
 
 2. Deploy the Mobile application 
 Build and run, either on a phisycal device or an emulator
+
+
+## Demo 
+Video can be found in: https://photos.app.goo.gl/g1ji1ta6VkQdEa5G8
