@@ -7,7 +7,7 @@ For getting the temperature and humidiy values, we will use a DHT sensor.
 
 Data will be stored in a cloud server and displayed through an application.
 
-## Prequisites
+## Pre-requisites
 - Raspberry Pi 4 model B
 - DHT 11 sensor
 - Mini breadboard
