@@ -14,3 +14,5 @@ Data will be stored in a cloud server and displayed through an application.
 - Servo Motor
 
 ## Schematics
+
+![image](https://user-images.githubusercontent.com/47315066/115553955-a7ece580-a2b6-11eb-98d0-646fb2f5fad4.png)
